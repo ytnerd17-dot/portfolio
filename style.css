@@ -188,3 +188,12 @@ footer {
     font-size: 4vw;
   }
 }
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #bbb; /* light gray on hover */
+}
