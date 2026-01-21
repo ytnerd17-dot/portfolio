@@ -14,16 +14,16 @@ body {
 }
 
 /* NAVBAR */
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 30px;
   background: linear-gradient(90deg, #000, #444);
   box-shadow: 0 2px 15px rgba(0,0,0,0.6);
   position: sticky;
   top: 0;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -34,6 +34,8 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 nav ul li {
@@ -52,9 +54,8 @@ nav ul li a:hover {
 }
 
 /* HERO */
-
 .hero {
-  padding: 90px 30px;
+  padding: 70px 20px;
   text-align: center;
   background: linear-gradient(135deg, #333, #555);
   border-radius: 12px;
@@ -63,19 +64,18 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 36px;
 }
 
 .hero p {
   margin-top: 12px;
-  font-size: 20px;
+  font-size: 18px;
   color: #ddd;
 }
 
 /* SECTION */
-
 .section {
-  padding: 50px 30px;
+  padding: 40px 20px;
   background: linear-gradient(135deg, #222, #444);
   border-radius: 12px;
   margin: 20px;
@@ -83,13 +83,13 @@ nav ul li a:hover {
 }
 
 .section:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 /* FORM */
-
 .form-box {
   max-width: 400px;
+  margin: 0 auto;
 }
 
 .form-box input,
@@ -118,7 +118,6 @@ nav ul li a:hover {
 }
 
 /* FOOTER */
-
 footer {
   text-align: center;
   padding: 15px;
@@ -126,13 +125,11 @@ footer {
 }
 
 /* ANIMATION */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -140,23 +137,38 @@ footer {
 }
 
 /* MOBILE RESPONSIVE */
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
   nav {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
   }
 
   nav ul {
+    flex-direction: column;
+    width: 100%;
     margin-top: 10px;
   }
 
+  nav ul li {
+    margin: 10px 0;
+  }
+
   .hero h1 {
-    font-size: 30px;
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 
   .section {
-    margin: 10px;
+    padding: 30px 15px;
+    margin: 15px 10px;
   }
 
+  .form-box {
+    width: 100%;
+  }
 }
