@@ -11,6 +11,7 @@ body {
   background: linear-gradient(135deg, #111, #2b2b2b);
   color: #fff;
   min-height: 100vh;
+  font-size: 16px; /* desktop base */
 }
 
 /* NAVBAR */
@@ -27,9 +28,8 @@ nav {
 }
 
 .logo {
-  font-size: 2vw; /* scales with screen */
+  font-size: 22px;
   font-weight: 600;
-  min-font-size: 18px;
 }
 
 nav ul {
@@ -46,8 +46,7 @@ nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
-  font-size: 1.2vw; /* scales */
-  min-font-size: 14px;
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -66,16 +65,13 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 6vw; /* fluid size */
-  line-height: 1.2;
-  min-font-size: 24px;
+  font-size: 32px; /* desktop size */
 }
 
 .hero p {
   margin-top: 12px;
-  font-size: 3vw; /* fluid size */
+  font-size: 16px; /* desktop size */
   color: #ddd;
-  min-font-size: 16px;
 }
 
 /* SECTION */
@@ -88,14 +84,11 @@ nav ul li a:hover {
 }
 
 .section h1 {
-  font-size: 5vw;
-  line-height: 1.2;
-  min-font-size: 20px;
+  font-size: 28px;
 }
 
 .section p {
-  font-size: 3vw;
-  min-font-size: 16px;
+  font-size: 16px;
 }
 
 .section:hover {
@@ -156,6 +149,8 @@ footer {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+
+  /* NAVBAR STACKING */
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -172,28 +167,32 @@ footer {
     margin: 10px 0;
   }
 
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  /* HERO */
   .hero h1 {
-    font-size: 8vw;
+    font-size: 8vw; /* fluid scaling */
   }
 
   .hero p {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
 
+  /* SECTION */
   .section h1 {
     font-size: 7vw;
   }
 
   .section p {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
-}
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
 
-a:hover {
-  color: #bbb; /* light gray on hover */
+  /* FORM */
+  .form-box input,
+  .form-box textarea,
+  .form-box button {
+    font-size: 18px;
+  }
 }
