@@ -27,15 +27,15 @@ nav {
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 2vw; /* scales with screen */
   font-weight: 600;
+  min-font-size: 18px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
 }
 
 nav ul li {
@@ -46,6 +46,8 @@ nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
+  font-size: 1.2vw; /* scales */
+  min-font-size: 14px;
   transition: 0.3s;
 }
 
@@ -64,13 +66,16 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 6vw; /* fluid size */
+  line-height: 1.2;
+  min-font-size: 24px;
 }
 
 .hero p {
   margin-top: 12px;
-  font-size: 18px;
+  font-size: 3vw; /* fluid size */
   color: #ddd;
+  min-font-size: 16px;
 }
 
 /* SECTION */
@@ -80,6 +85,17 @@ nav ul li a:hover {
   border-radius: 12px;
   margin: 20px;
   transition: 0.3s;
+}
+
+.section h1 {
+  font-size: 5vw;
+  line-height: 1.2;
+  min-font-size: 20px;
+}
+
+.section p {
+  font-size: 3vw;
+  min-font-size: 16px;
 }
 
 .section:hover {
@@ -99,6 +115,7 @@ nav ul li a:hover {
   margin-bottom: 12px;
   border-radius: 6px;
   border: none;
+  font-size: 16px;
 }
 
 .form-box button {
@@ -107,6 +124,7 @@ nav ul li a:hover {
   border-radius: 20px;
   border: none;
   font-weight: 600;
+  font-size: 16px;
   background: linear-gradient(135deg, #555, #000);
   color: white;
   cursor: pointer;
@@ -138,7 +156,6 @@ footer {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -156,19 +173,18 @@ footer {
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 8vw;
   }
 
   .hero p {
-    font-size: 16px;
+    font-size: 4vw;
   }
 
-  .section {
-    padding: 30px 15px;
-    margin: 15px 10px;
+  .section h1 {
+    font-size: 7vw;
   }
 
-  .form-box {
-    width: 100%;
+  .section p {
+    font-size: 4vw;
   }
 }
