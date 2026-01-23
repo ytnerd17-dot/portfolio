@@ -7,27 +7,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 body {
   background: linear-gradient(135deg, #111, #2b2b2b);
   color: #fff;
-  font-size: 16px;
-}
-
-/* PAGE CONTAINER */
-.page-container {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-}
-
-/* CONTENT WRAP */
-.content-wrap {
-  flex: 1;
+  font-size: 16px; /* desktop base */
 }
 
 /* NAVBAR */
@@ -38,6 +22,8 @@ nav {
   padding: 15px 30px;
   background: linear-gradient(90deg, #000, #444);
   box-shadow: 0 2px 15px rgba(0,0,0,0.6);
+  position: sticky;
+  top: 0;
   flex-wrap: wrap;
 }
 
@@ -75,15 +61,16 @@ nav ul li a:hover {
   background: linear-gradient(135deg, #333, #555);
   border-radius: 12px;
   margin: 20px;
+  animation: fadeIn 1s ease;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 32px; /* desktop size */
 }
 
 .hero p {
   margin-top: 12px;
-  font-size: 16px;
+  font-size: 16px; /* desktop size */
   color: #ddd;
 }
 
@@ -93,6 +80,7 @@ nav ul li a:hover {
   background: linear-gradient(135deg, #222, #444);
   border-radius: 12px;
   margin: 20px;
+  transition: 0.3s;
 }
 
 .section h1 {
@@ -103,27 +91,66 @@ nav ul li a:hover {
   font-size: 16px;
 }
 
+.section:hover {
+  transform: translateY(-3px);
+}
+
+/* FORM */
+.form-box {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  background: linear-gradient(135deg, #555, #000);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-box button:hover {
+  transform: scale(1.05);
+}
+
 /* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
   color: #aaa;
-  background: linear-gradient(90deg, #000, #222);
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-footer a:hover {
-  color: #bbb;
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
+  /* NAVBAR STACKING */
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -144,19 +171,28 @@ footer a:hover {
     font-size: 18px;
   }
 
+  /* HERO */
   .hero h1 {
-    font-size: 8vw;
+    font-size: 8vw; /* fluid scaling */
   }
 
   .hero p {
     font-size: 4.5vw;
   }
 
+  /* SECTION */
   .section h1 {
     font-size: 7vw;
   }
 
   .section p {
     font-size: 4.5vw;
+  }
+
+  /* FORM */
+  .form-box input,
+  .form-box textarea,
+  .form-box button {
+    font-size: 18px;
   }
 }
